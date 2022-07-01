@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>userdetails</title>
+        <style>
+            
+            .center {
+                margin: auto;
+                width: 60%;
+                border: 5px solid #FFFF00;
+                padding: 10px;
+                top: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <h3>Registered Users</h3><br>
+            <table style="border:solid;background-color: bisque;">
+                <tr style="background-color:aquamarine">
+                    <th>
+                        Firstname
+                    </th>
+                    <th>
+                        Lastname
+                    </th>
+                    <th>
+                        Favourite Car
+                    </th>
+                </tr>
+                {% for user in userdetails %}
+                <tr style="background-color:gray;font-size: medium;">
+                    <td>
+                        {{user[0]}}
+                    </td>
+                    <td>
+                       {{user[1]}}
+                    </td>
+                    <td>
+                        {{user[3]}}
+                    </td>
+                </tr>
+               {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>
